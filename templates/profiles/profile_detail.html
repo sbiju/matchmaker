@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+
+{% block content %}
+<div class="container">
+	<div class="row">
+		<div class="col-sm-8 col-sm-offset-4 user-details">
+            <div class="">
+                {% if profile.photo %}
+                <img src="{{ profile.photo.url }}" class="img-responsive thumbnail">
+                {% else %}
+                <img src="{% static 'img/roundflower.jpg' %}" class="img-responsive thumbnail">
+                  {% endif %}
+
+            </div>
+            <div class="user-info-block">
+                <div class="user-heading">
+                    <h3>{{ profile.user.username }}</h3>
+                    <span>{{ profile.city }}</span>
+                </div>
+            </div>
+
+
+        </div>
+	</div>
+</div>
+
+{% endblock %}
