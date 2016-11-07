@@ -5,25 +5,42 @@
 {% block content %}
 <div class="container">
 	<div class="row">
-		<div class="col-sm-8 col-sm-offset-4 user-details">
+		<div class="col-sm-4 col-sm-offset-8 user-details">
             <div class="">
                 {% if profile.photo %}
                 <img src="{{ profile.photo.url }}" class="img-responsive thumbnail">
                 {% else %}
                 <img src="{% static 'img/roundflower.jpg' %}" class="img-responsive thumbnail">
                   {% endif %}
-
-            </div>
-            <div class="user-info-block">
+                <div class="user-info-block">
                 <div class="user-heading">
+                    <h3>Personal Information</h3>
+                    <a href="{% url 'profiles:profile_update' %}">Update Personal Info</a>
                     <h3>{{ profile.user.username }}</h3>
-                    <span>{{ profile.city }}</span>
+                  <ul>
+                    <li>{{ profile.first_name }}
+                   {{ profile.last_name }}</li>
+                    <li>{{ profile.birth_date }}</li>
+                    <li>{{ profile.email }}</li>
+                    <li>{{ profile.phone }}</li>
+                    <li>{{ profile.gender }}</li>
+                    <li>{{ profile.country }}</li>
+                    <li>{{ profile.zip_code }}</li>
+                    <li>{{ profile.masjid }}</li>
+
+                    <li>{{ profile.occupation }}</li>
+                    <li>{{ profile.education }}</li>
+                    <li>{{ profile.marital_status }}</li>
+                    <li>{{ profile.have_childern }}</li>
+                    <li>{{ profile.methodology }}</li>
+                    <li>{{ profile.smoke }}</li>
+                    <li>{{ profile.drink }}</li>
+                    <li>{{ profile.timestamp }}</li>
+                  </ul>
                 </div>
             </div>
-
-
         </div>
 	</div>
 </div>
-
+</div>
 {% endblock %}

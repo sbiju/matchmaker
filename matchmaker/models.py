@@ -11,6 +11,9 @@ GENDER_CHOICES = (('M', 'Male'),
 COUNTRY_CHOICES = (('us', 'United States'),
                   ('ca', 'Canada'),
                   )
+SMOKE_CHOICES = (('yes', 'Yes'),
+                  ('no', 'No'),
+                  )
 
 
 def upload_location(instance, filename):
@@ -30,6 +33,13 @@ class Profile(models.Model):
     zip_code = models.IntegerField(default='10001')
     masjid = models.CharField(max_length=200, default='Masjid At-Taqwa')
     timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)
+    occupation = models.CharField(max_length=80,blank=True, null=True)
+    education = models.CharField(max_length=80,blank=True, null=True)
+    marital_status = models.CharField(max_length=80,blank=True, null=True, choices=SMOKE_CHOICES, default='no')
+    have_childern = models.CharField(max_length=80,blank=True, null=True, choices=SMOKE_CHOICES, default='no')
+    methodology = models.CharField(max_length=80,blank=True, null=True)
+    smoke = models.CharField(choices=SMOKE_CHOICES,max_length=80,blank=True, null=True, default='no' )
+    drink = models.CharField(choices=SMOKE_CHOICES,max_length=80,blank=True, null=True, default='no' )
     is_active = models.BooleanField(default=True)
 
     def __unicode__(self):

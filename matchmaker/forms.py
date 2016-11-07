@@ -13,6 +13,16 @@ class ProfileForm(forms.ModelForm):
             'email',
             'photo',
             'gender',
+            'country',
+
+            'zip_code',
+            'masjid',
+            'occupation',
+            'marital_status',
+            'have_childern',
+            'methodology',
+            'smoke',
+            'drink',
             ]
 
 
