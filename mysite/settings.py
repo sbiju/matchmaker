@@ -46,10 +46,11 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.twitter',
     'allauth.socialaccount.providers.pinterest',
     'allauth.socialaccount.providers.tumblr',
+    'django_messages',
     'matchmaker',
 ]
 SITE_ID = 1
-MIDDLEWARE = [
+MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -72,6 +73,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django_messages.context_processors.inbox',
             ],
         },
     },
@@ -147,7 +149,9 @@ ACCOUNT_AUTHENTICATION_METHOD = 'username'
 ACCOUNT_EMAIL_VERIFICATION = 'optional'
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'jayabalanp9@gmail.com'
+EMAIL_HOST_USER = 'azawajnet@gmail.com'
 EMAIL_HOST_PASSWORD = 'marriagewebsite'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3'

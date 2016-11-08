@@ -11,6 +11,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/', include('allauth.urls')),
     url(r'^register/$', register_view, name='register'),
+    url(r'^messages/', include('django_messages.urls')),
     url(r'^logout/$', logout_view, name='logout'),
     url(r'^login/$', login_view, name='login'),
     url(r'^$', HomePageView.as_view(), name='home'),

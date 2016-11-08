@@ -4,6 +4,8 @@
 
 {% block content %}
 <div class="container">
+    <a href="{% url 'messages_inbox' %}"><i class="fa fa-inbox fa-2x" aria-hidden="true"></i></a>
+
 	<div class="row">
 		<div class="col-sm-4 col-sm-offset-8 user-details">
             <div class="">
@@ -27,7 +29,6 @@
                     <li>{{ profile.country }}</li>
                     <li>{{ profile.zip_code }}</li>
                     <li>{{ profile.masjid }}</li>
-
                     <li>{{ profile.occupation }}</li>
                     <li>{{ profile.education }}</li>
                     <li>{{ profile.marital_status }}</li>
