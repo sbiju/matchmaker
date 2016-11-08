@@ -25,7 +25,7 @@ SECRET_KEY = '*jj8&zwe1w7n4@wbmvvwipc7nn&pu7fu($^o@m6wx+#ob1($t('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['azawajnet.pythonanywhere.com', '127.0.0.1', 'localhost:8000',]
+ALLOWED_HOSTS = ['azawajnet.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
