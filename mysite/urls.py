@@ -9,6 +9,7 @@ from accounts.views import register_view, login_view, logout_view
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^question/', include('qust_ans.urls')),
     url(r'^accounts/', include('allauth.urls')),
     url(r'^register/$', register_view, name='register'),
     url(r'^messages/', include('django_messages.urls')),
